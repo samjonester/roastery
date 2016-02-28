@@ -8,8 +8,4 @@ export default class CoffeeShopCtrl {
       this.shops = shops
     });
   }
-
-  view(id) {
-    angular.element(document.getElementById('coffeesop-info')).html(id)
-  }
 }

@@ -7,23 +7,21 @@
 
   <base href="/">
 </head>
-<body ng-controller="CoffeeShopCtrl as coffeeshop" layout="row">
+<body layout="row">
   <md-sidenav class="md-whiteframe-z2 md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
     <md-toolbar class="md-theme-indigo md-whiteframe-z2">
       <header class="nav-header">
         <h2><a ng-href="/">Roastery</a></h2>
       </header>
     </md-toolbar>
-    <md-list>
-      <md-list-item ng-repeat="shop in coffeeshop.shops" ng-click="coffeeshop.view(shop.id)"><p>{{shop.name}}</p></md-list-item>
+    <md-list ng-controller="CoffeeShopCtrl as coffeeshop">
+      <md-list-item ng-repeat="shop in coffeeshop.shops" ng-href="/{{shop.id}}"><p>{{shop.name}}</p></md-list-item>
     </md-list>
   </md-sidenav>
   <div layout="column" role="main" flex class="layout-column flex">
     <md-content class="site-content flex">
       <md-content class="coffeeshop-content flex md-whiteframe-z2">
-        <h1>Cafe Compendium</h1>
-        <p>Select your favorite shop to learn more</p>
-        <div id="coffeeshop-info"></div>
+        <ui-view></ui-view>
       </md-content>
     </md-content>
   </div>
