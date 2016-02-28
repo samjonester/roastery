@@ -1,15 +1,12 @@
+import CoffeeShopService from './CoffeeShopService'
+
 export default class CoffeeShopCtrl {
-  constructor() {
-    this.shops = [
-      {
-        'id': 'pour',
-        'name': 'Pour'
-      },
-      {
-        'id': 'rising-star',
-        'name': 'Rising Star'
-      }
-    ]
+  constructor(args = {}) {
+    this.coffeeShopService = args.coffeeShotService || new CoffeeShopService()
+
+    this.coffeeShopService.getShops().then((shops) => {
+      this.shops = shops
+    });
   }
 
   view(id) {
