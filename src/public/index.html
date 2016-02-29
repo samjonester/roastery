@@ -15,7 +15,7 @@
       </header>
     </md-toolbar>
     <md-list ng-controller="ShopListCtrl as coffeeshop">
-      <md-list-item ng-repeat="shop in coffeeshop.shops" ng-href="/{{shop.id}}"><p>{{shop.name}}</p></md-list-item>
+      <md-list-item ng-repeat="shop in coffeeshop.shops" ng-href="#/{{shop.id}}"><p>{{shop.name}}</p></md-list-item>
     </md-list>
   </md-sidenav>
   <div layout="column" role="main" flex class="layout-column flex">

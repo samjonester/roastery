@@ -11,9 +11,13 @@ This application is a simple Proof of Concept using the google maps directives w
 ### Install node modules
 `npm install`
 ### Run Development Server
-`npm start`
+`npm run devServer`
 ### Enjoy
 Navigate to `http://localhost:8080/`
+
+### Build and Deploy production
+`npm run build`
+`npm start`
 
 
 ## Notes / Limitations
