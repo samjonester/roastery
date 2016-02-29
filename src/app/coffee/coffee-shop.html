@@ -1,1 +1,18 @@
-<h1>{{coffeeShop.shop.name}}</h1>
+<div layout="row">
+  <div class="logo-container" layout="column"><img ng-src="img/{{coffeeShop.shop.logo}}" /></div>
+  <div layout="column">
+    <div layout="row">
+      <h1>{{coffeeShop.shop.name}}</h1>
+    </div>
+    <div layout="row">
+      <div class="shop-info-keys" layout="column">
+        <p>Atmosphere:</p>
+        <p>Coffee:</p>
+      </div>
+      <div layout="column">
+        <p>{{coffeeShop.shop.atmosphere}}</p>
+        <p>{{coffeeShop.shop.coffee}}</p>
+      </div>
+    </div>
+  </div>
+</div>

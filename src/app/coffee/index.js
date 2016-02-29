@@ -2,6 +2,7 @@ import angular from 'angular'
 import ngMaterial from 'angular-material'
 import ngRouter from 'angular-ui-router'
 
+import './coffee.css'
 import routing from './coffee.routes'
 import CoffeeShopCtrl from './CoffeeShopCtrl'
 import CoffeeShopService from './CoffeeShopService'

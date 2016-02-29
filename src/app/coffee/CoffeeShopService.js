@@ -5,15 +5,24 @@ export default class CoffeeShopService {
     this.shops =  [
       {
         id: 'pour',
-        name: 'Pour'
+        name: 'Pour Cleveland',
+        logo: 'pour-logo.png',
+        atmosphere: 'Modern Industrial',
+        coffee: 'Sourced from the best roasters around the globe.'
       },
       {
         id: 'rising-star',
-        name: 'Rising Star'
+        name: 'Rising Star Coffee Roasters',
+        logo: 'rising-star-logo.jpg',
+        atmosphere: 'Bohemian',
+        coffee: 'Roasted in house'
       },
       {
         id: 'phoenix',
-        name: 'Phoenix'
+        name: 'Phoenix Coffee',
+        logo: 'phoenix-logo.png',
+        atmosphere: 'Eclectic Comfortable',
+        coffee: 'Roasted in house'
       }
     ]
   }

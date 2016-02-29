@@ -1,0 +1,10 @@
+.logo-container {
+  margin-right: 40px;
+}
+.logo-container img {
+  max-width: 500px;
+}
+.shop-info-keys {
+  font-weight: bold;
+  margin-right: 40px;
+}
