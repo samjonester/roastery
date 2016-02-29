@@ -8,18 +8,30 @@
       <div class="shop-info-keys" layout="column">
         <p>Atmosphere:</p>
         <p>Coffee:</p>
+        <p>Website:</p>
       </div>
       <div layout="column">
         <p>{{coffeeShop.shop.atmosphere}}</p>
         <p>{{coffeeShop.shop.coffee}}</p>
+        <p><a href="{{coffeeShop.shop.website}}" target="_blank">{{coffeeShop.shop.website}}</a></p>
       </div>
     </div>
   </div>
 </div>
-<div layout="row" class="maps-container" layout-align="center">
-  <ui-gmap-google-map 
-    center='coffeeShop.map.center' 
-    zoom='coffeeShop.map.zoom'>
-  </ui-gmap-google-map>
+<div layout="row" layout-align="center">
+  <div layout="column" class="maps-container">
+    <ui-gmap-google-map center='coffeeShop.map.center' zoom='coffeeShop.map.zoom'>
+      <ui-gmap-marker ng-repeat="m in coffeeShop.shop.locations" coords="m.coords" idkey="m.id" options="{'labelContent': m.title, 'labelClass': 'map-marker'}"/>
+    </ui-gmap-google-map>
+  </div>
+  <div layout="column" class="coffee-shop-locations">
+    <md-list>
+      <md-subheader class="md-no-sticky"><h2>Locations</h2></md-subheader>
+      <md-list-item class="md-2-line" ng-repeat="m in coffeeShop.shop.locations" layout="column">
+        <strong>{{m.title}}</strong>
+        {{m.address}}
+      </md-list-item>
+    </md-list>
+  </div>
 </div>
 

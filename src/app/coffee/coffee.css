@@ -10,10 +10,18 @@
 }
 .maps-container {
   margin-top: 40px;
+  margin-right: 40px;
   height: 400px; 
   width: 700px;
 }
 .angular-google-map-container { 
   height: 400px; 
   width: 700px;
+}
+.coffee-shop-locations {
+}
+.map-marker {
+  background-color: #fff;
+  opacity: 0.7;
+  padding: 1px;
 }
