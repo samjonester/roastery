@@ -1,4 +1,4 @@
-<div layout="row">
+<div layout="row" layout-align="center">
   <div class="logo-container" layout="column"><img ng-src="img/{{coffeeShop.shop.logo}}" /></div>
   <div layout="column">
     <div layout="row">
@@ -16,3 +16,10 @@
     </div>
   </div>
 </div>
+<div layout="row" class="maps-container" layout-align="center">
+  <ui-gmap-google-map 
+    center='coffeeShop.map.center' 
+    zoom='coffeeShop.map.zoom'>
+  </ui-gmap-google-map>
+</div>
+
