@@ -14,7 +14,7 @@
         <h2><a ng-href="/">Roastery</a></h2>
       </header>
     </md-toolbar>
-    <md-list ng-controller="CoffeeShopCtrl as coffeeshop">
+    <md-list ng-controller="ShopListCtrl as coffeeshop">
       <md-list-item ng-repeat="shop in coffeeshop.shops" ng-href="/{{shop.id}}"><p>{{shop.name}}</p></md-list-item>
     </md-list>
   </md-sidenav>

@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 export default class CoffeeShopService {
   constructor() {
     this.shops =  [
@@ -10,18 +12,27 @@ export default class CoffeeShopService {
         name: 'Rising Star'
       },
       {
-        id: 'pheonix',
-        name: 'Pheonix'
+        id: 'phoenix',
+        name: 'Phoenix'
       }
     ]
   }
 
-  // Promise to resemble web request
+  // Promise to simulate web request
   getShops() {
     var me = this;
     return new Promise(function(resolve, reject) {
       resolve(me.shops);
-    });
+    })
+  }
+
+  // Promise to simulate web request
+  getShop(id) {
+    var me = this;
+    return new Promise(function(resolve, reject) {
+      let shop = _.find(me.shops, o => o.id===id)
+      resolve(shop)
+    })
   }
 }
 

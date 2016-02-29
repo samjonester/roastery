@@ -6,9 +6,13 @@ import 'angular-material/angular-material.css'
 import './app.css'
 import routing from './app.config'
 
-import CoffeeShopCtrl from './CoffeeShopCtrl'
-import home from './home'
+import ShopListCtrl from './coffee/ShopListCtrl'
+import CoffeeShopService from './coffee/CoffeeShopService'
 
-angular.module('app', [ngMaterial, ngRouter, home])
+import home from './home'
+import coffee from './coffee'
+
+angular.module('app', [ngMaterial, ngRouter, home, coffee])
   .config(routing)
-  .controller('CoffeeShopCtrl', CoffeeShopCtrl)
+  .controller('ShopListCtrl', ShopListCtrl)
+  .service('CoffeeShopService', CoffeeShopService)
