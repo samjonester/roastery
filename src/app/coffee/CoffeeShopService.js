@@ -1,7 +1,8 @@
 import _ from 'lodash'
 
 export default class CoffeeShopService {
-  constructor() {
+  constructor($q) {
+    this.$q = $q
     this.shops =  [
       {
         id: 'pour',
@@ -17,10 +18,7 @@ export default class CoffeeShopService {
             title: 'Downtown',
             address: '530 Euclid Ave, Cleveland, OH 44115'
           }
-        ],
-        options: {
-          title: 'Pour Cleveland - Downtown',
-        }
+        ]
       },
       {
         id: 'rising-star',
@@ -102,19 +100,12 @@ export default class CoffeeShopService {
 
   // Promise to simulate web request
   getShops() {
-    var me = this;
-    return new Promise(function(resolve, reject) {
-      resolve(me.shops);
-    })
+    return this.$q.when(this.shops)
   }
 
   // Promise to simulate web request
   getShop(id) {
-    var me = this;
-    return new Promise(function(resolve, reject) {
-      let shop = _.find(me.shops, o => o.id===id)
-      resolve(shop)
-    })
+    return this.$q.when(_.find(this.shops, o => o.id===id))
   }
 }
 

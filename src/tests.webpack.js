@@ -3,6 +3,7 @@
 
 import 'angular';
 import 'angular-mocks/angular-mocks';
+import 'jasmine-expect'
 
-var testsContext = require.context(".", true, /.spec$/);
+var testsContext = require.context(".", true, /.[sS]pec$/);
 testsContext.keys().forEach(testsContext);
