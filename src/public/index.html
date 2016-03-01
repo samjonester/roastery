@@ -6,9 +6,14 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
   <base href="/">
+  <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+  </style>
 </head>
 <body layout="row">
-  <md-sidenav class="md-whiteframe-z2 md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+  <md-sidenav class="md-whiteframe-z2 md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-cloak>
     <md-toolbar class="md-theme-indigo md-whiteframe-z2">
       <header class="nav-header">
         <h2><a ng-href="/">Roastery</a></h2>
@@ -18,7 +23,7 @@
       <md-list-item ng-repeat="shop in coffeeshop.shops" ng-href="#/{{shop.id}}"><p>{{shop.name}}</p></md-list-item>
     </md-list>
   </md-sidenav>
-  <div layout="column" role="main" flex class="layout-column flex">
+  <div layout="column" role="main" flex class="layout-column flex" ng-cloak>
     <md-content class="site-content flex">
       <md-content class="coffeeshop-content flex md-whiteframe-z2">
         <ui-view></ui-view>
