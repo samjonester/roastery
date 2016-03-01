@@ -2,7 +2,7 @@ routes.inject = ['$stateProvider'];
 
 export default function routes($stateProvider) {
   $stateProvider
-    .state('coffee-shop', {
+    .state('coffeeShop', {
       url: '/:id',
       template: require('./coffee-shop.html'),
       controller: 'CoffeeShopCtrl',

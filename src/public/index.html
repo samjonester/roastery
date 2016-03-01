@@ -16,11 +16,11 @@
   <md-sidenav class="md-whiteframe-z2 md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-cloak>
     <md-toolbar class="md-theme-indigo md-whiteframe-z2">
       <header class="nav-header">
-        <h2><a ng-href="/">Roastery</a></h2>
+        <h2><a ui-sref="home">Roastery</a></h2>
       </header>
     </md-toolbar>
     <md-list ng-controller="ShopListCtrl as coffeeshop">
-      <md-list-item ng-repeat="shop in coffeeshop.shops" ng-href="#/{{shop.id}}"><p>{{shop.name}}</p></md-list-item>
+      <md-list-item ng-repeat="shop in coffeeshop.shops" ui-sref="coffeeShop({id: shop.id})"><p>{{shop.name}}</p></md-list-item>
     </md-list>
   </md-sidenav>
   <div layout="column" role="main" flex class="layout-column flex" ng-cloak>
