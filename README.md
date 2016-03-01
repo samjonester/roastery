@@ -2,6 +2,7 @@
 
 ## Goal
 This application is a simple Proof of Concept using the google maps directives within AngularJS.
+View the solution at http://roastery.herokuapp.com/
 
 ## Usage
 ### Dependencies
