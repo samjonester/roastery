@@ -2,7 +2,10 @@
 
 ## Goal
 This application is a simple Proof of Concept using the google maps directives within AngularJS.
+
 View the solution at http://roastery.herokuapp.com/
+
+Travis Status: [![Build Status](https://travis-ci.org/samlawrencejones/roastery.svg?branch=master)](https://travis-ci.org/samlawrencejones/roastery)
 
 ## Usage
 ### Dependencies

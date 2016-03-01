@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - '5.5'
+deploy:
+  provider: heroku
+  api_key:
+    secure: zJwEEdVmosbGUVWwGLKKgmSyksh6CEtJiyrjM+m6X6rGg2j4Z78D+piUS/BpyW2iDUQhrRRdrFF1Zs2urGRlelxSJJiSnV6JBrMCV0gWJAsNVxMdWtkTk3rvsvCMY/Ts63Pqw6rNCKALopRNrkDAHxZvQyRpVzQrK+ZR6daqlwkPAi83A8iDdbWDJusPxDd1GY9Y3YHux2Z1n1XdQzvpmpu+5jp1KBgTb10MB+Hzb6Lqop8x0xM8jk0+zTsKuxwwH4un+yDoUDCSAP42iii1N4v5os4/LURz1scwncJ5pS8/ki9zfFss98rs21qEiz8IySBMCrLadutGb6MowgIawC4CkMcgiuQYfCyTPv09QRVpdDLSjYpww7beQ3h45wyA3/vd7we0Ca5pvOlRmKsUeeQ9TVdqrf7V9UaSk7+NaL7UvDrKLpR8HFMRW6k/QHXXiAPm8K4vpdPfmLaoaDMXF/wCHdKYMavtdV1zW7dFTZY3X1oKCg5hV90xy2J88tlzuWJNdZ9iZi5HsTU/zy+38Uoufsp56jblDIv01PKrAgeCZXDOxc9rDBhNI1Lg2wpyR9k1AezJDwIY54Pjt+k5cmHxt/zRPC7YQ/OLyJ2+JUUxHP1VBLHfXQZdafEdzagcI0hohku9Rj39FaeVCH6oMdB6gNuaXUH5pV7g2DXCsi0=
+  app: roastery
+  on:
+    repo: samlawrencejones/roastery
